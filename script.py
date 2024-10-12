@@ -24,12 +24,13 @@ def telegram_bot_sendtext(bot_message):
     return response.json()
 
 #variables
-sub = "Question Found"
+sub = "into Account"
 username = "nrama1219@gmail.com"
 password = "Nrama@89"
 login_text= f" Logged {sub}"
 limit_texts = f"Limit hit {sub}"
 flag = True
+alert = "Question found"
 while flag:
     try:
         # Set up the Chrome WebDriver
@@ -106,7 +107,7 @@ while True:
             i += 1
             
         else:
-            telegram_bot_sendques(f"{sub}")
+            telegram_bot_sendques(f"{alert}")
             time.sleep(720)
 
     except Exception as e:
