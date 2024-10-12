@@ -14,7 +14,7 @@ def telegram_bot_sendques(bot_message):
                 '&parse_mode=MarkdownV2&text=' + str(bot_message).replace('.', '\\.')  # Escape the dot character
     response = requests.get(send_text)
     return response.json()
-
+#Statusbot
 def telegram_bot_sendtext(bot_message):
     bot_token = '7689900582:AAEqvL6FpyCoALd6iOvwGneRJvbrQlYrWvw'
     bot_chatID = '6966110728'
@@ -24,7 +24,7 @@ def telegram_bot_sendtext(bot_message):
     return response.json()
 
 #variables
-sub = "Ramu"
+sub = "in Ramu"
 username = "nrama1219@gmail.com"
 password = "Nrama@89"
 login_text= f" Logged {sub}"
@@ -101,7 +101,7 @@ while True:
             
             if i <= 1:
                 telegram_bot_sendtext(i)
-            elif i % 5000 == 0:
+            elif i % 1000 == 0:
                 status = f"UP Running...  {i/10} {sub}"
                 telegram_bot_sendtext(status)
             i += 1
