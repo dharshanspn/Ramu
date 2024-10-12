@@ -101,7 +101,7 @@ while True:
             
             if i <= 1:
                 telegram_bot_sendtext(i)
-            elif i % 100 == 0:
+            elif i % 5000 == 0:
                 status = f"UP Running...  {i/10} {sub}"
                 telegram_bot_sendtext(status)
             i += 1
