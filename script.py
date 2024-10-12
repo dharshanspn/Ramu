@@ -8,25 +8,25 @@ import requests
 
 # Define functions to send messages via Telegram
 def telegram_bot_sendques(bot_message):
-    bot_token = '6283203048:AAGgOl-o6Itm3D1mw4_Omcf-g4t260vixN8'
-    bot_chatID = '1155462778'
+    bot_token = '7716677970:AAHMAtvPRlzr4Iu3Ob0cNF9LVQ1-YhOmrq0'
+    bot_chatID = '809899065'
     send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + bot_chatID + \
                 '&parse_mode=MarkdownV2&text=' + str(bot_message).replace('.', '\\.')  # Escape the dot character
     response = requests.get(send_text)
     return response.json()
 
 def telegram_bot_sendtext(bot_message):
-    bot_token = '6151330973:AAHuzkvwRjN9MfaFZ0LiiNUNdI0bgZqppQk'
-    bot_chatID = '1155462778'
+    bot_token = '7716677970:AAHMAtvPRlzr4Iu3Ob0cNF9LVQ1-YhOmrq0'
+    bot_chatID = '809899065'
     send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + bot_chatID + \
                 '&parse_mode=MarkdownV2&text=' + str(bot_message).replace('.', '\\.')  # Escape the dot character
     response = requests.get(send_text)
     return response.json()
 
 #variables
-sub = "EC"
-username = "srinivasanc0504@gmail.com"
-password = "Chegg@050402"
+sub = "Question Found"
+username = "nrama1219@gmail.com"
+password = "Nrama@89"
 login_text= f" Logged {sub}"
 limit_texts = f"Limit hit {sub}"
 flag = True
@@ -102,7 +102,7 @@ while True:
             if i <= 1:
                 telegram_bot_sendtext(i)
             elif i % 100 == 0:
-                status = f"UP Running...  {i/10} {sub}"
+                status = f"Bot is Running...  {i/10} {sub}"
                 telegram_bot_sendtext(status)
             i += 1
             
