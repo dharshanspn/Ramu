@@ -16,15 +16,15 @@ def telegram_bot_sendques(bot_message):
     return response.json()
 
 def telegram_bot_sendtext(bot_message):
-    bot_token = '7716677970:AAHMAtvPRlzr4Iu3Ob0cNF9LVQ1-YhOmrq0'
-    bot_chatID = '809899065'
+    bot_token = '7689900582:AAEqvL6FpyCoALd6iOvwGneRJvbrQlYrWvw'
+    bot_chatID = '6966110728'
     send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + bot_chatID + \
                 '&parse_mode=MarkdownV2&text=' + str(bot_message).replace('.', '\\.')  # Escape the dot character
     response = requests.get(send_text)
     return response.json()
 
 #variables
-sub = "into Account"
+sub = "Ramu"
 username = "nrama1219@gmail.com"
 password = "Nrama@89"
 login_text= f" Logged {sub}"
@@ -60,7 +60,7 @@ while flag:
         flag = False
     except Exception as e:
 
-        telegram_bot_sendques(f"Password {sub}")
+        telegram_bot_sendtext(f"Password {sub}")
 
 telegram_bot_sendtext(login_text)
 
@@ -88,7 +88,7 @@ while True:
                target_time += timedelta(days=1)
            # Calculate the difference in seconds
            n = (target_time - now).total_seconds()
-           telegram_bot_sendques(limit_texts)
+           telegram_bot_sendtext(limit_texts)
            time.sleep(n)
 
         driver.get("https://expert.chegg.com/qna/authoring/answer")
