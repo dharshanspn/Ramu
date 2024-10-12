@@ -61,7 +61,6 @@ while flag:
 
         telegram_bot_sendques(f"Password {sub}")
 
-
 telegram_bot_sendtext(login_text)
 
 # Navigate to the authoring page
@@ -102,7 +101,7 @@ while True:
             if i <= 1:
                 telegram_bot_sendtext(i)
             elif i % 100 == 0:
-                status = f"Bot is Running...  {i/10} {sub}"
+                status = f"UP Running...  {i/10} {sub}"
                 telegram_bot_sendtext(status)
             i += 1
             
